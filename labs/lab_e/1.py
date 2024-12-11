@@ -90,82 +90,10 @@ stoplight_color = "" # The current color of the stoplight
 # [FUNCTION] Finds contours in the current color image and uses them to update 
 # contour_center and contour_area
 def update_contour():
-    global stoplight_color
-    global contour_center
-    global contour_area
-    global contours_blue 
-    global contours_green 
-    global contours_red 
-    global contours_orange 
-    #global contours_any
-    global contour_blue , contour_green , contour_red , contour_orange #, contour_any
-    global stoplight_color
+    
+    
 
-    image = rc.camera.get_color_image()
-    print("cont start")
-    if image is not None:
-        if image is not None:
-            print("not none ")
-            contours_blue = rc_utils.find_contours(image, BLUE[0], BLUE[1])
-            contours_green = rc_utils.find_contours(image, GREEN[0], GREEN[1])
-            contours_red = rc_utils.find_contours(image, RED[0], RED[1])
-            contours_orange = rc_utils.find_contours(image, ORANGE[0], ORANGE[1])
-            print("cont2")
-            #contours_any = rc_utils.find_contours(image, ANY[0], ANY[1])
-
-            contour_blue = rc_utils.get_largest_contour(contours_blue, MIN_CONTOUR_AREA)
-            contour_green = rc_utils.get_largest_contour(contours_green, MIN_CONTOUR_AREA)
-            contour_red = rc_utils.get_largest_contour(contours_red, MIN_CONTOUR_AREA)
-            contour_orange = rc_utils.get_largest_contour(contours_orange, MIN_CONTOUR_AREA) 
-            print("cont3")
-            #contour_any = rc_utils.get_largest_contour(contours_any, MIN_CONTOUR_AREA) 
-
-            contour_center_blue = rc_utils.get_contour_center(contour_blue)
-            contour_center_green = rc_utils.get_contour_center(contour_green)
-            contour_center_red = rc_utils.get_contour_center(contour_red)
-            contour_center_orange = rc_utils.get_contour_center(contour_orange) 
-
-            if contour_center_blue is not None and contour_center_green is not None and contour_center_red is not None and contour_center_orange is not None:
-                rc_utils.draw_circle(image, contour_center_blue)
-                rc_utils.draw_circle(image, contour_center_green)
-                rc_utils.draw_circle(image, contour_center_red)
-                rc_utils.draw_circle(image, contour_center_orange)
-
-                rc_utils.draw_contour(image, contour_blue)
-                rc_utils.draw_contour(image, contour_green)
-                rc_utils.draw_contour(image, contour_red)
-                rc_utils.draw_contour(image, contour_orange)
-
-            if  contour_blue is not None and len(contours_blue) > 0:
-                print("con blu")
-                stoplight_color = "blue"
-            elif contour_orange is not None and len(contours_orange) > 0: 
-                print("con ora")
-                stoplight_color = "orange"
-            elif contour_green is not None and len(contours_green) > 0:
-                print("con gre")
-                stoplight_color = "green"
-            elif contour_red is not None and len(contours_red) > 0:
-                print("con red")
-                stoplight_color = "red"
-    else:
-          if image is None:
-            contour_center = None
-            contour_area = 0
-            print("cont 1")
-
-
-
-
-
-            # TODO Part 2: Search for line colors, and update the global variables
-            # contour_center and contour_area with the largest contour found
-
-            # TODO Part 3: Repeat the search for all potential traffic light colors,
-            # then select the correct color of traffic light detected.
-
-            # Display the image to the screen
-    rc.display.show_color_image(image)
+    print("pls no dump")
 
 # [FUNCTION] The start function is run once every time the start button is pressed
 def start():
@@ -184,7 +112,7 @@ def start():
         "   A button = print current speed and angle\n"
         "   B button = print contour center and area"
     )
-    update_contour()
+    
 
 # [FUNCTION] After start() is run, this function is run once every frame (ideally at
 # 60 frames per second or slower depending on processing speed) until the back button
@@ -193,7 +121,7 @@ def update():
     global queue
     print("update ini")
 
-    
+    update_contour()
 
     print("update fin")
 

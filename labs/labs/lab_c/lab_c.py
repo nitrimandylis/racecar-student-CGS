@@ -81,10 +81,10 @@ def update():
     # TODO Part 1: Modify the following conditional statement such that when the
     # right trigger is pressed, the RACECAR moves forward at the designated speed.
     # when the left trigger is pressed, the RACECAR moves backward at the designated speed.
-    if rc.controller.get_trigger(rc.controller.Trigger.RIGHT) > 0.5:
-        speed = 1
-    elif rc.controller.get_trigger(rc.controller.Trigger.LEFT) > 0.5:
-        speed = -1
+    if rc.controller.get_trigger(rc.controller.Trigger._____) > _____:
+        speed = _____
+    elif rc.controller.get_trigger(rc.controller.Trigger._____) > _____:
+        speed = _____
     else:
         speed = 0
       
@@ -93,9 +93,9 @@ def update():
     # When the value of the left joystick's x-axis is less than 0, the RACECAR's wheels turn left.
     (x, y) = rc.controller.get_joystick(rc.controller.Joystick._____)
     if x > 0.5:
-        angle = 1
+        angle = _____
     elif x < -0.5:
-        angle = -1
+        angle = -_____
     else:
         angle = 0
 

@@ -24,7 +24,6 @@ import sys
 
 sys.path.insert(0, '../library')
 import racecar_core
-import racecar_utils as rc_utils
 
 ########################################################################################
 # Global variables
@@ -46,8 +45,6 @@ def start():
     # the beginning of our function like this
     global counter
     global isDriving
-    value = rc_utils.remap_range(48,0,180,-1,1)
-    print(value)
 
     # The start function is a great place to give initial values to global variables
     counter = 0

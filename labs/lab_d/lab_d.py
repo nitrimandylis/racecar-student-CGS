@@ -7,7 +7,7 @@ File Name: lab_d.py
 
 Title: Lab D - Driving in Shapes
 
-Author: NickTrim << [Write your name or team name here]
+Author: [PLACEHOLDER] << [Write your name or team name here]
 
 Purpose: Create a script to enable semi-autonomous driving for the RACECAR. Button presses
 enable a series of instructions sent to the RACECAR, which enable it to drive in various shapes.
@@ -29,7 +29,7 @@ import sys
 
 from typing import Counter
 
-sys.path.insert(1, "/Users/nick/Developer/racecar-neo-installer/racecar-student/library")
+sys.path.insert(1, "../../library")
 import racecar_core
 import racecar_utils as rc_utils
 

@@ -49,7 +49,6 @@ counter = 0
 
 # [FUNCTION] The start function is run once every time the start button is pressed
 def start():
-
     
     # TODO Part 1: Write a print statement that will print "Hello World!" to the terminal 
     # window

@@ -58,7 +58,7 @@ def start():
 
     # TODO Part 1: Modify the variable below to your name. Modify the print statement,
     # such that when run, the program prints "Hello {your name}, welcome to RACECAR!"
-    your_name = "Vangel"
+    your_name = "_____"
     # print(f"Welcome {_____}, welcome to RACECAR!")
 
 # [FUNCTION] After start() is run, this function is run once every frame (ideally at
@@ -71,11 +71,11 @@ def update():
     # TODO Part 2: Modify the following if statement's contents to print out "Hello World!"
     # to the terminal window after the "A" button has been pressed on the keyboard.
     if rc.controller.was_pressed(rc.controller.Button.A):
-        print("Hello World!")
+        print("_____")
 
     # TODO Part 3: Modify the following if statement to print out "Welcome to RACECAR
     # <your name>!" after the "B" button has been released on the keyboard.
-    if rc.controller.was_released(rc.controller.Button.B):
+    if rc.controller._____(rc.controller.Button._):
         print(f"Welcome to RACECAR {_____}!")
 
     # TODO Part 4: Modify the following if statment to print out the current elapsed 
